@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .resim{
+            position: relative;
+            top: 70%;
+            left: 30%;
+            transform: translate(-50,-60);
+        }
+        .button{
+            z-index: 100;
+           width: 100px;
+           background-color: cadetblue;
+           height: 50px;
+        }
+        .evet{
+            position: absolute;
+            top: 70%;
+            left: 39%;
+            transform: translate(-50,-60);
+        }
+        .hayir{
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            transform: translate(-50,-60);
+        }
+    </style>
+</head>
+<body style="max-height: 500px;">
+    <div>
+      <h1>benimle evlenirmisin</h1>
+        <img src="💐.jpeg" width="40%" alt="" class="resim">
+        <input type="button"class="button evet"value="evet" onclick="bas()">  
+        <input type="button" value="hayır" id="ha" class="button hayir" onmouseover="rastgele()">  
+    </div>
+    <script>
+        function rastgele(params) {
+            var top = Math.random() *600;
+            var left = Math.random() *1300;
+            document.getElementById("ha").style.top=top+"px"; 
+            document.getElementById("ha").style.left=left+"px"; 
+        }
+        function bas(params) {
+       
+             var yeniSayfaURL = "indexkabul.html";
+  
+            window.location.href = yeniSayfaURL; 
+        }
+    </script>
+</body>
+</html>
